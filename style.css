@@ -1,48 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-}
-
-body {
-    background: #080808;
-    color: #fff;
-}
-
-#header {
-    width: 100%;
-    height: 100vh;
-    background-image: url(image\ 6.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.container {
-    padding: 10px 5%;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.logo {
-    width: 200px;
-    left: 10px;
-    margin-top: 15%;
-    cursor: pointer;
-}
-
-nav ul {
-    list-style-type: none;
-    display: none; /* Hide the navigation by default on small screens */
-}
-
-nav ul.open {
-    display: block; /* Display the navigation when the menu icon is clicked */
+/* Global Styles */{ margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; box-sizing: border-box; }body { background: #080808; color: #fff; }.container { padding: 10px 5%; }/* Header Styles */ #header { width: 100%; height: 100vh; background-image: url(image\ 6.png); background-size: cover; background-position: center; }.logo { width: 200px; cursor: pointer; margin-top: 10px; }nav { display: flex; align-items: center; justify-content: space-between; }nav ul { display: flex; list-style: none; }nav ul li { margin: 0 20px; }nav ul li a { color: #fff; text-decoration: none; font-size: 18px; position: relative; }nav ul li a::after { content: ''; width: 0; height: 2px; background: #09eed3; position: absolute; left: 0; bottom: -3px; transition: width 0.3s; }nav ul li a:hover::after { width: 100%; }.header-text { margin-top: 10%; text-align: center; }.header-text h1 { font-size: 50px; margin-top: 20px; }.header-text h1 span { color: rgb(5, 225, 196); }/* About Section Styles */ #about { padding: 40px 0; color: #09eed3; }.about-1st-column { flex: 0 0 100%; max-width: 100%; text-align: center; }.about-1st-column img { width: 80%; border-radius: 15px; margin: 0 auto; }.about-2nd-column { flex: 0 0 100%; max-width: 100%; color: #fff; margin-top: 30px; }.heading { font-size: 40px; color: #eb043a; text-align: center; }.paragraph { font-size: 20px; text-align: justify; margin-top: 20px; }.paragraph span { font-weight: bold; color: #04d4eb; text-decoration: underline; }.titles { display: flex; justify-content: space-between; margin: 20px 0; }.about-first, .about-second { font-size: 25px; font-weight: bold; color: rgb(236, 236, 5); cursor: pointer; }.contains { list-style: none; font-size: 18px; color: aqua; margin-top: 10px; }/* Blogs Section Styles */ #blogs { padding: 30px 0; }.bloglist { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); grid-gap: 40px; margin-top: 50px; }.bloglist div { background: #242121; padding: 20px; font-size: 16px; font-weight: 400; border-radius: 15px; }.bloglist div h2 { font-size: 24px; font-weight: bold; margin-bottom: 15px; }.bloglist div p { margin-top: 10px; text-align: justify; }.bloglist div a { display: block; color: #fff; text-decoration: none; margin-top: 15px; }.blog img { width: 100%; border-radius: 10px; transition: transform 0.5s; cursor: pointer; }.blog:hover img { transform: scale(1.1); }/* Contact Section Styles */ #contact { padding: 40px 0; color: #09eed3; }.contact form { width: 100%; }form input, form textarea { width: 100%; border: 0; outline: none; background: #151414; padding: 15px; margin: 15px 0; color: #fff; font-size: 16px; border-radius: 7px; }.submit { width: fit-content; border: 1px solid #e20829; padding: 13px 50px; border-radius: 8px; color: #fff; background: #080808; transition: background 0.5s; cursor: pointer; }.submit:hover { background: #ff0015; }/* Footer Styles */ .footer { background: #151414; padding: 20px 0; text-align: center; font-weight: 400; color: #fff; }.Icon { display: none; }@media only screen and (max-width: 768px) { .Icon { display: block; font-size: 25px; position: absolute; top: 25px; left: 25px; cursor: pointer; }nav ul {
+    display: none;
     background: #151414;
     position: fixed;
     top: 0;
@@ -51,90 +8,33 @@ nav ul.open {
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 nav ul li {
-    text-align: center;
-    list-style: none;
-    margin: 25px;
+    margin: 20px 0;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 20px;
-    position: relative;
-}
-
-nav ul li a::after {
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: #09eed3;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-nav ul li a:hover::after {
-    width: 100%;
-}
-
-.Icon {
-    display: block;
-    font-size: 25px;
-    position: absolute;
-    top: 25px;
-    left: 25px;
-    cursor: pointer;
+    font-size: 18px;
 }
 
 .header-text {
-    margin-top: 15%;
-    font-size: 28px;
+    margin-top: 50px;
 }
 
 .header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
+    font-size: 30px;
 }
 
-.header-text h1 span {
-    color: rgb(5, 225, 196);
+.about-1st-column img {
+    width: 80%;
+    margin: 0 auto;
 }
 
-/* Media query for small screens (max-width: 768px) */
-@media only screen and (max-width: 768px) {
-    .Icon {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul {
-        background: #151414;
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 200px;
-        height: 100vh;
-        padding-top: 50px;
-        z-index: 2;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-
-    nav ul .Icon {
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: point;
-    }
-}
-
-/* Add more media queries for other screen sizes as needed */
-
-/* Add more mobile-specific styles as needed */
+.about-first,
+.about-second {
+    margin: 0;
+}}
